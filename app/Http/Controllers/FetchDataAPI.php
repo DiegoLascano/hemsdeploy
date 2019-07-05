@@ -44,7 +44,7 @@ class FetchDataAPI extends Controller
     */
     public function scheduleToday($date)
     {
-        $chromosome = Schedule::whereDate('created_at', $date)->where('status', 'COMPLETED')->latest()->first()['chromosome'];
+        $chromosome = Schedule::whereDate('created_at', $date)->where('owner_id', auth()->id())->where('status', 'COMPLETED')->latest()->first()['chromosome'];
         if (is_null($chromosome)) {
             return null;
         };

@@ -104,13 +104,13 @@ Route::resource('appliances', 'AppliancesController');
 
 Route::get('/api/userControl', function() {
     $routes[0]['name'] = 'Dashboard';
-    $routes[0]['route'] = 'http://homenergymanager.test/dashboard';
+    $routes[0]['route'] = 'http://homenergymanager.com/dashboard';
     $routes[1]['name'] = 'Appliances';
-    $routes[1]['route'] = 'http://homenergymanager.test/appliances';
+    $routes[1]['route'] = 'http://homenergymanager.com/appliances';
     $routes[2]['name'] = 'PV Control';
-    $routes[2]['route'] = 'http://homenergymanager.test/dailyPV';
+    $routes[2]['route'] = 'http://homenergymanager.com/dailyPV';
     $routes[3]['name'] = 'Schedules';
-    $routes[3]['route'] = 'http://homenergymanager.test/schedules';
+    $routes[3]['route'] = 'http://homenergymanager.com/schedules';
 
     return $routes;
 });
