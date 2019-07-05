@@ -8,7 +8,8 @@ use App\Prcu;
 use App\PowerGenerated;
 use App\Schedule;
 use App\Appliance;
-use App\DailyPV;
+// use App\DailyPV;
+use App\DailyEnergy;
 use App\Events\FlashMessage;
 
 class FetchDataAPI extends Controller
@@ -166,9 +167,9 @@ class FetchDataAPI extends Controller
             $date2 = request('date2') ?: $yesterday;
         }
 
-        $data[0] = DailyPV::where('date', $date1)->get();
+        $data[0] = DailyEnergy::where('date', $date1)->get();
         if (isset($date2)) {
-            $data[1] = DailyPV::where('date', $date2)->get();
+            $data[1] = DailyEnergy::where('date', $date2)->get();
         }
 
         // dd($data);
@@ -234,7 +235,7 @@ class FetchDataAPI extends Controller
         // if (is_null($date)) {
         //     $date = Carbon::now()->format('Y-m-d');
         // }
-        $PV = DailyPV::select('1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24')
+        $PV = DailyEnergy::select('1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24')
                         ->where('date', $date)->get();
         // Generate a vector with 120 values 
         for ($i=1; $i < 25; $i++) { 

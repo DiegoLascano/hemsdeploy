@@ -1,20 +1,22 @@
 <?php
 
-use App\Services\GeneticAlgorithm\Individual;
-use App\Services\GeneticAlgorithm\Population;
-use App\Services\GeneticAlgorithm\GeneticAlgorithm;
-use App\Appliance;
+// use App\Services\GeneticAlgorithm\Individual;
+// use App\Services\GeneticAlgorithm\Population;
+// use App\Services\GeneticAlgorithm\GeneticAlgorithm;
+// use App\Appliance;
 use Carbon\Carbon;
-use App\Services\GeneticAlgorithm\Schedule;
-use App\Prcu;
-use App\Services\GeneticAlgorithm\SchedulingGA;
-use App\Services\GeneticAlgorithm\FitnessFunction;
-use App\PowerGenerated;
-use App\Events\PvUpdated;
+// use App\Services\GeneticAlgorithm\Schedule;
+// use App\Prcu;
+// use App\Services\GeneticAlgorithm\SchedulingGA;
+// use App\Services\GeneticAlgorithm\FitnessFunction;
+// use App\PowerGenerated;
+// use App\Events\PvUpdated;
 use App\Events\FlashMessage;
-use App\Events\FlashMsg;
-use App\Events\FlaMsg;
-use App\Schedule as ScheduleModel;
+// use App\Http\Controllers\DailyHour;
+
+// use App\Events\FlashMsg;
+// use App\Events\FlaMsg;
+// use App\Schedule as ScheduleModel;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,9 +39,11 @@ Auth::routes();
 Route::get('/dashboard', 'TabsController@dashboard')->name('dashboard');
 Route::get('/trends', 'TabsController@trends')->name('trends');
 Route::get('/historical', 'TabsController@historical')->name('historical');
-Route::get('/pvreal', function(){
-    return view('pages.pvreal');
-});
+// Route::get('/pvreal', function(){
+//     FlashMessage::dispatch('success', 'PV data updated');
+//     return "mensaje flash enviado";
+//     // return view('pages.pvreal');
+// });
 
 Route::get('/api/energyCost', 'FetchDataAPI@energyCost')->name('energyCost');
 Route::get('/api/pvSim', 'FetchDataAPI@pvSim')->name('pvSim');
@@ -94,7 +98,9 @@ Route::get('ga/importData', function(){
 
 Route::resource('schedules', 'SchedulesController');
 Route::resource('appliances', 'AppliancesController');
-Route::resource('dailyPV', 'DailyPVController');
+// Route::resource('dailyPV', 'DailyPVController');
+
+// Route::get('/dailyHour/{dailyHour}/edit', 'DailyHour@edit');
 
 Route::get('/api/userControl', function() {
     $routes[0]['name'] = 'Dashboard';

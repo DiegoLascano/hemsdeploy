@@ -21,7 +21,10 @@
                 </tr>
                 @for ($i = 1; $i < 25; $i++)
                     <tr>
-                        <td class="border-b text-sm text-grey-darkest p-2 text-center">{{ $i }}</td>
+                        <td class="border-b text-sm text-grey-darkest p-2 text-center hover:bg-cyan-600 hover:text-white">
+                            <a class="no-underline" href="/dailyHour/{{ $i }}/edit">{{ $i }}</a>
+                            {{-- <a class="no-underline" href="/dailyPV/{{ $dailyPV[0]['id'] }}/edit">{{ $i }}</a> --}}
+                        </td>
                         <td class="border-b text-sm text-grey-darkest p-2 text-center">{{ $dailyPV[0][$i] }}</td>
                     </tr>
                 @endfor
