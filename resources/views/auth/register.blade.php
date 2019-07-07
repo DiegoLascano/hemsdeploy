@@ -6,7 +6,7 @@
 
 @section('content')
 <div class="my-auto">
-    <div class="form-box mx-auto">
+    <div class="form-box mx-auto my-3 lg:my-0">
         <p class="text-cyan-800 text-center text-md font-bold mb-4 uppercase">Crear cuenta</p>
         <form method="POST" action="{{ route('register') }}">
             @csrf
@@ -32,7 +32,7 @@
                 <label class="label-text" for="password_confirmation">
                     Confirmación de contraseña
                 </label>
-                <input name="password_confirmation" class="input-box" id="password_confirmation" type="password_confirmation" placeholder="******************" required>
+                <input name="password_confirmation" class="input-box" id="password_confirmation" type="password" placeholder="******************" required>
             </div>
             <div class="flex flex-wrap items-center justify-between">
                 <button class="btn btn-primary" type="submit">

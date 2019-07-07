@@ -7,14 +7,14 @@
         <div class="md:p-3">
             <tab-header class="flex-1 bg-white">
                 <tab-content name="Costo" :selected="true">
-                    <div class="flex flex-wrap">
-                        <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 py-3 md:pr-3">
+                    <div class="flex flex-wrap md:-mx-3">
+                        <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 py-3 md:px-3">
                             <daily-cost icon="icon-currency-euro" url="/api/grossCost"></daily-cost>
                         </div> 
                         <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 md:p-3">
                             <daily-cost icon="icon-currency-euro" url="/api/realCost"></daily-cost>
                         </div>
-                        <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 py-3 md:pl-3">
+                        <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 py-3 md:px-3">
                             <daily-savings icon="icon-wallet" url="/api/costSavings"></daily-savings>
                         </div>
                     </div>

@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 use Carbon\Carbon;
 // use App\DailyPV;
 use App\DailyEnergy;
-use App\Events\PvUpdated;
-use App\Events\FlashMessage;
+// use App\Events\PvUpdated;
+// use App\Events\FlashMessage;
 
 class DailyPVController extends Controller
 {
@@ -83,6 +83,7 @@ class DailyPVController extends Controller
      */
     public function update(Request $request, DailyEnergy $dailyPV)
     {
+        // dd($dailyPV->`1`);
         // $attributes = $request->only(['0','1','2','3']);
         // $attributes = ([
         //     $dailyPV[1] => $request->input('1'),
