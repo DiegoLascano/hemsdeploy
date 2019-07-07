@@ -31,6 +31,9 @@ use App\Events\FlashMessage;
 
 
 Route::get('/', function () {
+    return redirect('/home');
+});
+Route::get('/home', function () {
     return view('welcome');
 });
 
