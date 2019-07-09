@@ -12,6 +12,10 @@ use Carbon\Carbon;
 // use App\PowerGenerated;
 // use App\Events\PvUpdated;
 use App\Events\FlashMessage;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ScheduleGenerated as mailScheduleGenerated;
+use App\Events\ScheduleGenerated;
+
 // use App\Http\Controllers\DailyHour;
 
 // use App\Events\FlashMsg;
@@ -36,17 +40,18 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return view('welcome');
 });
+Route::get('/mail', function () {
+    $mail = 'mail funcionando';
+    // Mail::to('diegolascano@gmail.com')->send(new mailScheduleGenerated($mail));
+    event(new ScheduleGenerated($mail));
+    return 'mail enviado';
+});
 
 Auth::routes();
 
 Route::get('/dashboard', 'TabsController@dashboard')->name('dashboard');
 Route::get('/trends', 'TabsController@trends')->name('trends');
 Route::get('/historical', 'TabsController@historical')->name('historical');
-// Route::get('/pvreal', function(){
-//     FlashMessage::dispatch('success', 'PV data updated');
-//     return "mensaje flash enviado";
-//     // return view('pages.pvreal');
-// });
 
 Route::get('/api/energyCost', 'FetchDataAPI@energyCost')->name('energyCost');
 Route::get('/api/pvSim', 'FetchDataAPI@pvSim')->name('pvSim');
@@ -64,11 +69,9 @@ Route::get('/api/energyData', 'FetchDataAPI@energyData')->name('energyData');
  * Routes for small cards with daily values
  */
 Route::get('/api/dailyAvg', 'FetchDataAPI@dailyAvg')->name('dailyAvg');
-// Route::get('/api/historicalAvg', 'FetchDataAPI@historicalAvg')->name('historicalAvg');
 Route::get('/api/estimatedCost', 'FetchDataAPI@estimatedCost')->name('estimatedCost');
 Route::get('/api/realCost', 'FetchDataAPI@realCost')->name('realCost');
 Route::get('/api/grossCost', 'FetchDataAPI@grossCost')->name('grossCost');
-// Route::get('/api/historicalGrossCost', 'FetchDataAPI@historicalGrossCost')->name('historicalGrossCost');
 Route::get('/api/consumedEnergy', 'FetchDataAPI@consumedEnergy')->name('consumedEnergy');
 Route::get('/api/pvRealGenerated', 'FetchDataAPI@pvRealGenerated')->name('pvRealGenerated');
 Route::get('/api/pvSimUsed', 'FetchDataAPI@pvSimUsed')->name('pvSimUsed');
@@ -78,32 +81,13 @@ Route::get('/api/energySavings', 'FetchDataAPI@energySavings')->name('energySavi
 Route::get('/api/pvSim', 'FetchDataAPI@pvSim')->name('pvSim');
 Route::get('/api/pvGenReal', 'FetchDataAPI@pvGenReal')->name('pvGenReal');
 
-Route::get('/ga', function() {
-    // $title = 'success';
-    // $message = 'New schedule generated successfully';
-    // event(new FlashMessage($title, $message));
-    $date = '2019-05-25';
-    $newDate = Carbon::parse($date)->toFormattedDateString();
-    // $newDate->setDateFrom($date);
-    dd($newDate);  
-    return view('ga');
-})->name('ga');
-Route::get('/back', function () {
-    session()->flash('error', 'Success message');
-    session()->flash('type', 'error');
-    return redirect()->back();
-    // return redirect()->back()->with('message', 'Success message');
-});
-
-Route::get('ga/importData', function(){
-    // IMPORT CSV FOR Prcu DATA
-})->name('importData');
+// Route::get('ga/importData', function(){
+//     // IMPORT CSV FOR Prcu DATA
+// })->name('importData');
 
 Route::resource('schedules', 'SchedulesController');
 Route::resource('appliances', 'AppliancesController');
 // Route::resource('dailyPV', 'DailyPVController');
-
-// Route::get('/dailyHour/{dailyHour}/edit', 'DailyHour@edit');
 
 Route::get('/api/userControl', function() {
     $routes[0]['name'] = 'Dashboard';

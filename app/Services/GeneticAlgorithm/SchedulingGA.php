@@ -9,6 +9,7 @@ use Carbon\Carbon;
 use App\Prcu;
 use App\PowerGenerated;
 use App\Events\FlashMessage;
+use App\Events\PvUpdated;
 
 class SchedulingGA
 {
@@ -177,7 +178,8 @@ class SchedulingGA
             'status' => 'COMPLETED'
         ]);
         event(new FlashMessage('success', 'Nuevo cronograma generado exitosamente'));
-        // event(new ScheduleGenerated($bestSolution));
+        PvUpdated::dispatch();
+        event(new ScheduleGenerated($bestSolution->getChromosomeString()));
 
         dump($bestSolution);
     }

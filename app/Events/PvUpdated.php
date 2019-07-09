@@ -20,7 +20,7 @@ class PvUpdated implements ShouldBroadcast
      *
      * @return void
      */
-    public function __construct($pvUpdated)
+    public function __construct($pvUpdated = null)
     {
         $this->pvUpdated = $pvUpdated;
     }

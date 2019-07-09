@@ -1,14 +1,14 @@
 @component('mail::message')
-# Hey
+# Hola
 
-A new Schedule was just generated
+Un nuevo cronograma ha sido generado.
 
 {{ $newSchedule }}
 
 @component('mail::button', ['url' => ''])
-Home Energy Manager System
+Home Energy Management System
 @endcomponent
 
-Thanks,<br>
+Gracias,<br>
 {{ config('app.name') }}
 @endcomponent
