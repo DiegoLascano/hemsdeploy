@@ -10,11 +10,17 @@
 export default {
     data(){
         return{
-            show: true,
+            show: false,
         }
     },
 
     created(){
+        if(window.innerHeight<500 || window.innerWidth<500){
+            this.show = false;
+        }else{
+            this.show = true;
+        };
+        // console.log(this.show);
         this.$eventBus.$on('toggle-sidebar', (data) => {
             this.toggleShow()
         })

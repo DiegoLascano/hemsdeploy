@@ -3462,11 +3462,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      show: true
+      show: false
     };
   },
   created: function created() {
     var _this = this;
+
+    if (window.innerHeight < 500 || window.innerWidth < 500) {
+      this.show = false;
+    } else {
+      this.show = true;
+    }
+
+    ; // console.log(this.show);
 
     this.$eventBus.$on('toggle-sidebar', function (data) {
       _this.toggleShow();
