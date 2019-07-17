@@ -14,23 +14,23 @@
                 @csrf
                 <div class="flex flex-wrap -mx-3 mb-6">
                     <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-                        <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-first-name">
-                            Nombre
+                        <label class="block tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-first-name">
+                            NOMBRE
                         </label>
                         <input name="name" class="input-box" id="grid-first-name" type="text" value="{{ $appliance->name }}">
                         {{-- <p class="text-red text-xs italic">Please fill out this field.</p> --}}
                     </div>
                     <div class="w-full md:w-1/2 px-3">
-                        <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-last-name">
-                            Potencia [kW]
+                        <label class="block tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-last-name">
+                            POTENCIA [kW]
                         </label>
                         <input name="power_kWh" class="input-box" id="grid-last-name" type="text" value="{{ $appliance->power_kWh }}">
                     </div>
                 </div>
                 <div class="flex flex-wrap -mx-3 mb-6">
                     <div class="w-full md:w-1/4 px-3 mb-6 md:mb-0">
-                        <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-state">
-                            Inicio [h]
+                        <label class="block tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-state">
+                            INICIO [h]
                         </label>
                         <div class="relative">
                             <select name="start_oti" class="input-box" id="grid-state">
@@ -48,8 +48,8 @@
                         </div>
                     </div>
                     <div class="w-full md:w-1/4 px-3 mb-6 md:mb-0">
-                        <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-state">
-                            Fin [h]
+                        <label class="block tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-state">
+                            FIN [h]
                         </label>
                         <div class="relative">
                             <select name="finish_oti" class="input-box" id="grid-state">
@@ -67,14 +67,14 @@
                         </div>
                     </div>
                     <div class="w-full md:w-1/4 px-3 mb-6 md:mb-0">
-                        <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-zip">
-                            Duración [min]
+                        <label class="block tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-zip">
+                            CICLO [min]
                         </label>
                         <input name="length_operation" class="input-box" id="grid-zip" type="text" value="{{ $appliance->length_operation * 12 }}">
                     </div>
                     <div class="w-full md:w-1/4 px-3 mb-6 md:mb-0">
                         <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-zip">
-                            Estado
+                            ESTADO
                         </label>
                         <input name="status" class="input-box" id="grid-zip" type="text" value="{{ $appliance->status}}">
                     </div>

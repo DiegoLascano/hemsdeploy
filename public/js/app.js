@@ -2409,7 +2409,7 @@ __webpack_require__.r(__webpack_exports__);
         //     from: new Date(), //today
         // },
         date1: new Date(),
-        date2: new Date()
+        date2: new Date(2019, 2.18)
       },
       // days: {
       //     today: new Date(),
@@ -2471,10 +2471,12 @@ __webpack_require__.r(__webpack_exports__);
             //     unit: 'hour',
             // },
             scaleLabel: {
-              display: false,
+              display: true,
               fontSize: 13,
-              fontStyle: 'bold',
-              labelString: "Horas"
+              fontStyle: 'normal',
+              fontFamily: "'Consolas', Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
+              fontColor: 'rgb(72, 101, 129)',
+              labelString: "Tiempo [h]"
             },
             gridLines: {
               display: false
@@ -2739,10 +2741,12 @@ __webpack_require__.r(__webpack_exports__);
           }],
           xAxes: [{
             scaleLabel: {
-              display: false,
+              display: true,
               fontSize: 13,
-              fontStyle: 'bold',
-              labelString: "Horas"
+              fontStyle: 'normal',
+              fontFamily: "'Consolas','Arial', 'Helvetica Neue', 'Helvetica', sans-serif",
+              fontColor: 'rgb(72, 101, 129)',
+              labelString: "Tiempo [h]"
             },
             gridLines: {
               display: false
@@ -3177,12 +3181,12 @@ __webpack_require__.r(__webpack_exports__);
         // },
         scales: {
           yAxes: [{
-            // scaleLabel: {
-            //     display: true,
-            //     fontSize: 13,
-            //     fontStyle: 'bold',
-            //     labelString: "Costo [¢ / kWh]"
-            // },
+            scaleLabel: {
+              display: false,
+              fontSize: 13,
+              fontStyle: 'bold',
+              labelString: "Costo [¢ / kWh]"
+            },
             gridLines: {
               display: false
             },
@@ -3194,12 +3198,14 @@ __webpack_require__.r(__webpack_exports__);
             }
           }],
           xAxes: [{
-            // scaleLabel: {
-            //     display: true,
-            //     fontSize: 13,
-            //     fontStyle: 'bold',
-            //     labelString: "Horas"
-            // },
+            scaleLabel: {
+              display: true,
+              fontSize: 13,
+              fontStyle: 'normal',
+              fontFamily: "'Consolas', Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
+              fontColor: 'rgb(72, 101, 129)',
+              labelString: "Tiempo [h]"
+            },
             gridLines: {
               display: false
             },

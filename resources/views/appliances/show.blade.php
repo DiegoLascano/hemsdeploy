@@ -10,22 +10,22 @@
             <p class="text-cyan-800 text-center text-md font-bold uppercase mb-4">Artefacto</p>
                 <div class="flex flex-wrap -mx-3 mb-6">
                     <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-                        <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-first-name">
-                            Nombre
+                        <label class="block tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-first-name">
+                            NOMBRE
                         </label>
                         <input name="name" class="input-box" id="grid-first-name" type="text" value="{{ $appliance->name }}" disabled>
                     </div>
                     <div class="w-full md:w-1/2 px-3">
-                        <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-last-name">
-                            Potencia [kW]
+                        <label class="block tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-last-name">
+                            POTENCIA [kW]
                         </label>
                         <input name="power_kWh" class="input-box" id="grid-last-name" type="text" value="{{ $appliance->power_kWh }}" disabled>
                     </div>
                 </div>
                 <div class="flex flex-wrap -mx-3 mb-6">
                     <div class="w-full md:w-1/4 px-3 mb-6 md:mb-0">
-                        <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-state">
-                            Inicio [h]
+                        <label class="block tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-state">
+                            INICIO [h]
                         </label>
                         <div class="relative">
                             <input type="text" class="input-box" value="{{ ceil($appliance->start_oti / 5) . ":00" }}" disabled>
@@ -35,8 +35,8 @@
                         </div>
                     </div>
                     <div class="w-full md:w-1/4 px-3 mb-6 md:mb-0">
-                        <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-state">
-                            Fin [h]
+                        <label class="block tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-state">
+                            FIN [h]
                         </label>
                         <div class="relative">
                             <input type="text" class="input-box" value="{{ ceil($appliance->finish_oti / 5) . ":00"}}" disabled>
@@ -46,14 +46,14 @@
                         </div>
                     </div>
                     <div class="w-full md:w-1/4 px-3 mb-6 md:mb-0">
-                        <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-zip">
-                            Duración [min]
+                        <label class="block tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-zip">
+                            CICLO [min]
                         </label>
                         <input name="length_operation" class="input-box" id="grid-zip" type="text" value="{{ $appliance->length_operation * 12 }}" disabled>
                     </div>
                     <div class="w-full md:w-1/4 px-3 mb-6 md:mb-0">
-                        <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-zip">
-                            Estado
+                        <label class="block tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-zip">
+                            ESTADO
                         </label>
                         <input name="status" class="input-box" id="grid-zip" type="text" value="{{ $appliance->status }}" disabled>
                     </div>

@@ -50,7 +50,7 @@ export default {
                 //     from: new Date(), //today
                 // },
                 date1: new Date(),
-                date2: new Date(),
+                date2: new Date(2019,2.18),
             },
             // days: {
             //     today: new Date(),
@@ -115,10 +115,12 @@ export default {
                         //     unit: 'hour',
                         // },
                         scaleLabel: {
-                            display: false,
+                            display: true,
                             fontSize: 13,
-                            fontStyle: 'bold',
-                            labelString: "Horas"
+                            fontStyle: 'normal',
+                            fontFamily: "'Consolas', Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
+                            fontColor: 'rgb(72, 101, 129)',
+                            labelString: "Tiempo [h]",
                         },
                         gridLines: {
                             display: false,

@@ -20,12 +20,12 @@
             <table class="w-full">
                 <tr>
                     {{-- <th class="bg-grey-050 align-left text-grey-darkest text-sm p-2 text-center">ID</th> --}}
-                    <td class="bg-grey-050 font-semibold uppercase text-grey-darker text-xs p-2 text-left">Nombre</td>
-                    <td class="bg-grey-050 font-semibold uppercase text-grey-darker text-xs p-2 text-center">Potencia[kWh]</td>
-                    <td class="bg-grey-050 font-semibold uppercase text-grey-darker text-xs p-2 text-center">Inicio[h]</td>
-                    <td class="bg-grey-050 font-semibold uppercase text-grey-darker text-xs p-2 text-center">Fin[h]</td>
-                    <td class="bg-grey-050 font-semibold uppercase text-grey-darker text-xs p-2 text-center hidden md:table-cell">Duración[min]</td>
-                    <td class="bg-grey-050 font-semibold uppercase text-grey-darker text-xs p-2 text-center hidden lg:table-cell">Estado</td>
+                    <td class="bg-grey-050 font-semibold text-grey-darker text-xs p-2 text-left">NOMBRE</td>
+                    <td class="bg-grey-050 font-semibold text-grey-darker text-xs p-2 text-center">POTENCIA [kW]</td>
+                    <td class="bg-grey-050 font-semibold text-grey-darker text-xs p-2 text-center">INICIO [h]</td>
+                    <td class="bg-grey-050 font-semibold text-grey-darker text-xs p-2 text-center">FIN [h]</td>
+                    <td class="bg-grey-050 font-semibold text-grey-darker text-xs p-2 text-center hidden md:table-cell">CICLO [min]</td>
+                    <td class="bg-grey-050 font-semibold text-grey-darker text-xs p-2 text-center hidden lg:table-cell">ESTADO</td>
                 </tr>
                 @foreach ($appliances as $appliance)
                     <tr>

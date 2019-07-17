@@ -76,10 +76,12 @@ export default {
                     }],
                     xAxes: [{
                         scaleLabel: {
-                            display: false,
+                            display: true,
                             fontSize: 13,
-                            fontStyle: 'bold',
-                            labelString: "Horas"
+                            fontStyle: 'normal',
+                            fontFamily: "'Consolas','Arial', 'Helvetica Neue', 'Helvetica', sans-serif",
+                            fontColor: 'rgb(72, 101, 129)',
+                            labelString: "Tiempo [h]",
                         },
                         gridLines: {
                             display: false,

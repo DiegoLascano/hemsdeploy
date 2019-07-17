@@ -57,12 +57,12 @@
                 // },
                 scales: { 
                     yAxes: [{
-                        // scaleLabel: {
-                        //     display: true,
-                        //     fontSize: 13,
-                        //     fontStyle: 'bold',
-                        //     labelString: "Costo [¢ / kWh]"
-                        // },
+                        scaleLabel: {
+                            display: false,
+                            fontSize: 13,
+                            fontStyle: 'bold',
+                            labelString: "Costo [¢ / kWh]"
+                        },
                         gridLines: {
                             display: false,
                         },
@@ -74,12 +74,14 @@
                         }
                     }],
                     xAxes: [{
-                        // scaleLabel: {
-                        //     display: true,
-                        //     fontSize: 13,
-                        //     fontStyle: 'bold',
-                        //     labelString: "Horas"
-                        // },
+                        scaleLabel: {
+                            display: true,
+                            fontSize: 13,
+                            fontStyle: 'normal',
+                            fontFamily: "'Consolas', Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
+                            fontColor: 'rgb(72, 101, 129)',
+                            labelString: "Tiempo [h]",
+                        },
                         gridLines: {
                             display: false,
                         },
